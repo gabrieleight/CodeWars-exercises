@@ -10,11 +10,13 @@ If a string contains all repeating characters, it should return an empty string 
 
 def first_non_repeating_letter(string):
     string_normal = string.lower()
+    if string == '':
+        return ""
     for i in string_normal:
         ocorrencias = string_normal.count(i)
         if ocorrencias == 1:
             return string[string_normal.find(i)]
-    if ocorrencias > 1 or string_normal == "":
+    if ocorrencias > 1:
         return ""
             
 if __name__ == "__main__":
